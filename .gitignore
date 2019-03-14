@@ -1,2 +1,4 @@
 #Ignore the venv folder
 venv/
+.DS_Store
+
