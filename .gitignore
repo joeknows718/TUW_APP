@@ -1,4 +1,6 @@
 #Ignore the venv folder
 venv/
 .DS_Store
-
+_pycache__/
+*.pyc
+*.sqlite3
