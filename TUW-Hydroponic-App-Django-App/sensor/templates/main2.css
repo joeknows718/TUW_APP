@@ -5,9 +5,7 @@ div{
     /* border-style: lavender;
     border:solid;
     display: inline-block; */
-    /* -moz-box-shadow: 0px 10px 14px -7px #276873;
-    -webkit-box-shadow: 0px 10px 14px -7px #276873;
-    box-shadow: 0px 10px 14px -7px #276873; */
+
 
 }
 
@@ -16,23 +14,6 @@ div{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  position: absolute;
-top: 140%;
-left: -1px;
-right: 0;
-background: white;
-border-radius: inherit;
-border: 1px solid rgba(0,0,0,0.17);
-box-shadow: 0 0 5px rgba(0,0,0,0.1);
-font-weight: normal;
--webkit-transition: all 0.5s ease-in;
--moz-transition: all 0.5s ease-in;
--ms-transition: all 0.5s ease-in;
--o-transition: all 0.5s ease-in;
-transition: all 0.5s ease-in;
-list-style: none;
-opacity: 0;
-pointer-events: none;
 }
 
 
@@ -64,63 +45,16 @@ pointer-events: none;
   /* overflow: hidden; */
 }
 
-#alert-button{
-
-  
-    -moz-box-shadow: 0px 10px 14px -7px #276873;
-    -webkit-box-shadow: 0px 10px 14px -7px #276873;
-    box-shadow: 0px 10px 14px -7px #276873;
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
-    background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
-    background-color:#599bb3;
-    -moz-border-radius:8px;
-    -webkit-border-radius:8px;
-    border-radius:8px;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Trebuchet MS;
-    font-size:17px;
-    font-weight:bold;
-    /* padding:13px 32px; */
-    text-decoration:none;
-    text-shadow:0px 1px 0px #3d768a;
-    /* margin-left: 10%; */
-  
-
-}
-
-#alert-button:hover {
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
-  background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
-  background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
-  background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
-  background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
-  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
-  background-color:#408c99;
-}
-#alert-button:active {
-  position:relative;
-  top:1px;
-}
-
 
 
 .main-menu .navigation > li > a {
-    /* position: relative; */
+    position: relative;
     /* display: block; */
     width: 100%;
     font-size: 150%;
-    display: flex;
-    justify-content: space-between;
+
     text-align: center;
-    line-height: 3%;
+    line-height: 25px;
     letter-spacing: 0px;
     opacity: 1;
     font-weight: 500;
@@ -161,18 +95,10 @@ li a {
   padding-top: 50px;
   text-decoration: none;
 }
-
-.banner-li{
-  display: flex;
-  align-self: auto;
-  padding: 3%;
-  margin-bottom: 1%;
-}
-
 .logo{
-    height: 20vh;
+    height: 12vh;
     /* padding: 25px 0; */
-        /* padding-top: 3%; */
+        padding-top: 25px;
         padding-right: 0px;
         padding-bottom: 3%;
         padding-left: 0px;
@@ -199,12 +125,11 @@ element {
 
 .header-text{
 
-    display: flex;
-    justify-content: flex-start;
+
     /* font-family: inherit; */
-    /* margin-left: 10%; */
+    margin-left: 10%;
     /* margin-block-end: 5%; */
-    font-size: 400%;
+    font-size: 300%;
     font-weight: 500;
     line-height: 1.1;
     color: #517423;
@@ -293,15 +218,13 @@ margin: auto;
 
 
 .Graph{
-  /* display: flex; */
-    /* justify-content: center; */
+    justify-content: center;
     /* margin-left: 15%; */
 }
 
 
 .content {
     padding: 16px;
-    background-color: #276873;
   }
 
   .sticky {
@@ -319,9 +242,7 @@ margin: auto;
   }
 
 #graph-body {
-  /* margin-left: 15%; */
-  display: flex;
-  justify-content: center;
+  margin-left: 15%;
   margin-top: 3%;
 }
 
@@ -337,7 +258,6 @@ margin: auto;
 #timestamp{
     display: flex;
     justify-content: flex-end;
-    flex-direction: row-reverse;
     font-size: large;
     color: black;
 }
@@ -375,25 +295,18 @@ margin: auto;
 .main-body{
   /* background-color: red; */
   /* display: inline; */
-  background-color:  #e0e0eb;
   overflow: hidden;
   width: 100%;
-
 }
 
 @media only screen and (max-width: 415px) {
 
 .main{
-    border-style:solid;
-    border-width: 80px;
-    padding: 55%;
-    background-color: #f00;
-    padding: 1px 25%; set padding to simulate border
+ 
     float: none;
     width: 50%;
-    display: block;
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -454,39 +367,7 @@ margin: auto;
     width: 85%;
 
 
-    margin-left: 7.5%;
-  }
-
-  #button-formatting{ display: flex; 
-    justify-content: flex-start; 
-    flex-direction: row; 
-    margin-left: 5%; 
-    height: 5%; 
-    width: 10%;
-  }
-
-  #banner{
-    background-color: #276873;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    color: whitesmoke;
-    /* font: "Raleway";  */
-    width: 100%;
-    font-size: 300%;
-    /* border-style: solid;
-    border-width: 25%; */
-    -moz-box-shadow: 0px 10px 14px -7px #276873;
-    -webkit-box-shadow: 0px 10px 14px -7px #276873;
-    box-shadow: 0px 10px 14px -7px #276873;
-  }
-
-  #banner-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin-left: 15%;
   }
 
   #alerts td, #alerts th {
@@ -512,27 +393,11 @@ margin: auto;
 }
 
 .main {
-  /* margin-left: 25%; */
+  margin-left: 25%;
   /*padding: 5%;*/
-  padding: 2%;
-  background-color: #276873;
   justify-content: auto;
-  border: #276873;
-  border-style: solid;
-  border-width: 25%;
   /* flex-flow: row-reverse; */
 }
-
-.main > .main-body  {
-/* border: none; */
-background-color:  #efeff5;
-}
-/* 
-
-
-
-
-
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -558,8 +423,7 @@ display: inline-block;
 
 .main-menu .navigation > li > a {
     position: relative;
-    display: flex;
-    justify-content: space-between;
+    display: block;
     font-size: 120%;
     /* color: #ecf3f7; */
     text-align: center;
@@ -567,7 +431,6 @@ display: inline-block;
     letter-spacing: 0px;
     /* opacity: 1; */
     /* font-weight: 500; */
-    
     text-transform: capitalize;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -596,11 +459,6 @@ li a:hover {
   color: white;
 } */
 
-li a:hover {
-  background-color: #555;
-  color: white;
-} */
-
  /* Dropup Button */
  .dropbtn {
   background-color: #3498DB;
@@ -622,50 +480,13 @@ li a:hover {
   /* padding: 10px; */
 }
 
-.dashboard-row{
-  display: flex; 
-  justify-content: space-between; 
-  flex-direction: row; 
-  margin: 5%; 
-  position: relative; 
-  align-items: center
-}
-
 
 .graph-menu{
     /* float: right; */
-    display: flex;
-    justify-content: flex-end;
-    /* margin-top: 3%; */
-    /* margin-left: 15%; */
+    margin-top: 3%;
+    margin-left: 15%;
     height: 5%;
     width: 10%;
-    box-shadow: 0 4px 4px rgba(50,50,50,0.1);
-    outline-color: #2980B9;
-    display: block;
-    padding: 10px 70px 10px 13px !important; 
-    max-width: 100%; 
-    height: auto !important; 
-    border: 1px solid #e3e3e3; 
-    border-radius: 3px; 
-    background: url("https://i.ibb.co/b7xjLrB/selectbox-arrow.png") right center no-repeat; 
-    background-color: #599bb3; 
-    /* background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
-    background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
-    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%); */
-    -moz-box-shadow: 0px 10px 14px -7px #276873;
-    -webkit-box-shadow: 0px 10px 14px -7px #276873;
-    box-shadow: 0px 10px 14px -7px #276873;
-    color: #fff; 
-    font-size: 12px; 
-    font: inherit;
-    line-height: 16px !important; 
-    appearance: none; 
-    /* this is must */ -webkit-appearance: none; 
-    -moz-appearance: none; 
 }
 
  .dot {
@@ -708,4 +529,3 @@ li a:hover {
 .dropup:hover .dropbtn {
   background-color: #2980B9;
 }
-\
