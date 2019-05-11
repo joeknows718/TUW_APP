@@ -1,13 +1,153 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="main.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"> -->
+    <style>
+    </style>
 </head>
-<body>
-	{{ph|safe}}
-	{{ec|safe}}
-	{{co2|safe}}
-	{{temp|safe}}
-	{{Humidity|safe}}
-</body>
+<body class="">
+  <header>
+    <nav class="main-menu">
+      <div>
+        <ul class="navigation pull-left clearfix ul-header">
+          <li><a href="/Services">Services</a></li>
+          <li><a href="/Data-Dashboard">Dashboard</a></li>
+          <li><a href="/Login">Login</a></li>
+          <li><a href="/Home">Home</a></li>
+          <div class="logo pull-left">
+            <a href="/" title=""><img style="height: 10vh" src="https://s3.amazonaws.com/uw-assets/public/img/logo.png" alt="" ></a>
+          </div>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div id="sidebar">
+    <div id="sidenav">
+      <div class="li-vertical">Overview</div>
+      <div class="li-vertical">Dashboard</div>
+      <div class="li-vertical">Notifications</div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="row" style="display: flex; justify-content: space-between;">
+      <div class="header-text">
+        Overview
+      </div>
+      <div class="header-text" id="timestamp">
+      </div>
+    </div>
+    <div class="overview-ul">
+        <div class="overview-text">
+          <div class="data" id="pH">
+            <p>{{current_status.pH}}</p> <p>PH</p>
+          </div>
+        </div>
+        <div class="overview-text">
+          <div class="data" id="Temp">
+            <p>{{current_status.Temp}}</p> <p>Temp</p>
+          </div>
+        </div>
+        <div class=" overview-text">
+            <div class="data" id="c02">
+              <p>{{current_status.CO2}}</p> <p>c02</p>
+            </div>
+        </div>
+    </div>
+    <div class="overview-ul">
+      <div class="overview-text">
+        <div class="data" id="EC">
+          <p>{{current_status.EC}}</p> <p>EC</p>
+        </div>
+      </div>
+    </div>
+    <div class='Graph row'>
+      <div style="display: flex">
+         <div class="header-text">
+           Dashboard
+         </div>
+          <select onchange="changeDate(this.value)" class="graph-menu btn btn-primary dropd\\own-toggle col-xs-2"  id="graph">
+            <option onclick>24 Hours</option>
+            <option onclick>Week</option>
+            <option onclick>Month</option>
+            <option onclick>9 Months</option>
+          </select>
+          <select  onchange="changeData(this.value)" class="graph-menu btn btn-primary dropd\\own-toggle col-xs-2"  id="graph">
+            <option >PH</option>
+            <option >Temp</option>
+            <option >C02</option>
+            <option >EC</option>
+          </select>
+       </div>
+        {{ graph|safe }}
+     </div>
+     <div class="Notifications" >
+      <div class="header-text">
+        Notifications
+      </div>
+      <table id="alerts" class="">
+        <tr>
+          <th>Status Icon</th>
+          <th>data</th>
+          <th>data quantity</th>
+          <th>time stamp</th>
+        </tr>
+      </table>
+        </div>
+        </div>
+      </div>
+
+    </body>
+    <script>
+      var changeDate = function(e){
+        console.log(window.location.pathname)
+        document.location.href = `?date=${e}`
+      }
+      var changeData = function(e){
+        console.log(window.location.pathname)
+        document.location.href = `?graph=${e}`
+      }
+        const alerts = document.getElementById('alerts');
+        alertbutton = document.getElementById('alert button');
+        alertbutton.addEventListener('click', function(){
+            var time = new Date()
+            var datatype = 'Temp'
+            var quantity = 500
+            var color ='yellow'
+            if (quantity>400) {
+                var color ='red'
+            }
+            else{
+                var color = 'green'
+            }
+
+            // get information from database, set status based on alert information
+
+            alerts.innerHTML += `<tr>
+                    <th><span class="dot" style='background-color: ${color}'></span></th>
+                    <th>${datatype}</th>
+                    <th>${quantity}</t\h>
+                    <th>${time}</th>
+            </tr>`
+        })
+
+
+      window.onscroll = function() {myFunction()};
+      var navbar = document.getElementById("sidenav");
+      var sticky = navbar.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
 </html>
